@@ -45,6 +45,25 @@ function nextTrack() {
   return;
 }
 
+function skipNext() {
+  var file = album.src.split("/");
+  var nextTrackNumber = parseInt(file[file.length - 1]) + 1;
+  var newSource = "audio/"+nextTrackNumber+".mp3";
+  trackNumber.innerHTML = nextTrackNumber;
+  album.src = newSource;
+  if (isPlaying == true) {
+    album.play();
+    isPlaying = true;
+    toggleAudio.src = "images/pause_circle.svg";
+    return;
+  } else {
+    album.pause();
+    isPlaying = false;
+    toggleAudio.src = "images/play_circle.svg";
+    return;
+  }
+}
+
 function switchCover() {
   var switchCover = document.getElementById("switchCover");
   if (backCover.style.display == '' || backCover.style.display == 'none') {
