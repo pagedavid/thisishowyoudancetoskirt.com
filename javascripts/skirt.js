@@ -35,11 +35,15 @@ function togglePlay() {
   }
 }
 
+function getTrackTitle(num) {
+  return trackTitles[num - 1];
+}
+
 function nextTrack() {
   var file = album.src.split("/");
   var nextTrackNumber = parseInt(file[file.length - 1]) + 1;
   var newSource = "audio/"+nextTrackNumber+".mp3";
-  trackNumber.innerHTML = nextTrackNumber;
+  trackTitle.innerHTML = getTrackTitle(nextTrackNumber);
   album.src = newSource;
   album.play();
   return;
@@ -52,7 +56,7 @@ function skipNext() {
     nextTrackNumber = 1;
   }
   var newSource = "audio/"+nextTrackNumber+".mp3";
-  trackNumber.innerHTML = nextTrackNumber;
+  trackTitle.innerHTML = getTrackTitle(nextTrackNumber);
   album.src = newSource;
   if (isPlaying == true) {
     album.play();
@@ -74,7 +78,7 @@ function skipPrevious() {
     previousTrackNumber = 7;
   }
   var newSource = "audio/"+previousTrackNumber+".mp3";
-  trackNumber.innerHTML = previousTrackNumber;
+  trackTitle.innerHTML = getTrackTitle(previousTrackNumber);
   album.src = newSource;
   if (isPlaying == true) {
     album.play();
@@ -179,7 +183,7 @@ function init() {
   setContainerSize();
   var album = document.getElementById("album");
   var toggleAudio = document.getElementById("toggleAudio");
-  var trackNumber = document.getElementById("trackNumber");
+  var trackTitle = document.getElementById("trackTitle");
 
   var coverNav = document.getElementById("coverNav");
   var switchCover = document.getElementById("switchCover");
@@ -205,5 +209,7 @@ var currentPage = 0;
 var insidePageList = ["page1","page2","page3","page4","page5","page6", "page7"];
 var backgroundColors = [ "green", "maroon", "aqua", "black", "fuchsia", "olive", "gray"];
 var backgroundBlendModes = ["color-burn", "hard-light", "hard-light", "hard-light", "multiply", "hard-light", "darken"];
+
+var trackTitles = ["Brutality Forever","Skirt","MBST","There’s No Reason to Be Alone (Woo Yeah)","Announcement","17 Years","If We Live, We Live to Tread on Kings"];
 
 window.onload = init;
