@@ -152,32 +152,27 @@ html, body {
 
 
 .content{
+  color: white;
+  font-size: 1.2em;
 }
 
 .song-title {
   font-size: 3em;
-//  background-color: rgba(0,0,0,.8);
-//  color: white;
+  font-family: "Rockwell Std", serif;
+
 }
 
 .song-information {
-  padding: 1em;
-//  background-color: rgba(255,255,255,.8);
-//  @include flex-wrap(nowrap);
-//  @include display-flex(flex);
-//  @include flex-direction(row-reverse);
-//  @include justify-content(center);
-//  @include align-items(center);
-//  @include align-content(center);
+ // padding: 1em;
+
 }
 .attributions {
-  padding: 1em;
-//  @include align-self(flex-end);
+  //padding: 1em;
   dl {
 
   }
   dt {
-    width: 8em;
+    width: 9em;
     float: left;
     clear:left;
     display: inline-block;
@@ -190,7 +185,7 @@ html, body {
 }
 
 .lyrics {
-  padding: 1em;
+  //padding: 1em;
   p {
     margin-bottom: 1em;
   }
@@ -199,9 +194,7 @@ html, body {
   }
 }
 
-.page-1 {
-  //background-color: red;
-  //background-blend-mode: lighten;
+.page-1 { //BRUTALITY FOREVER
   .song-title {
     position: absolute;
     top: 10%;
@@ -209,71 +202,79 @@ html, body {
   }
   .attributions {
     position: absolute;
-    top: 50%;
-    left: 10%;
+    top: 20%;
+    right: 10%;
   }
   .lyrics {
     position: absolute;
-    top: 10%;
-    right: 10%;
+    top: 20%;
+    left: 10%;
   }
 }
 
-.page-2 {
+.page-2 { //SKIRT
   .song-title {
+    color: black;
     position: absolute;
-    top: 10%;
-    left: 10%;
+    top: 20%;
+    right: 25%;
   }
   .attributions {
+    color:black;
     position: absolute;
-    top: 50%;
-    left: 10%;
+    top: 35%;
+    left: 30%;
   }
   .lyrics {
+    color: black;
     position: absolute;
-    top: 10%;
-    right: 10%;
+    bottom: 25%;
+    right: 15%;
   }
 }
 
-.page-3 {
+.page-3 { //MBST
   .song-title {
+    color: black;
     position: absolute;
-    top: 10%;
-    left: 10%;
+    top: 35%;
+    left: 42%;
   }
   .attributions {
+    color: black;
     position: absolute;
-    top: 50%;
-    left: 10%;
+    bottom: 35%;
+    left: 5%;
   }
   .lyrics {
+    color: black;
     position: absolute;
-    top: 10%;
-    right: 10%;
+    top: 30%;
+    right: 25%;
   }
 }
 
-.page-4 {
+.page-4 { //THERE'S NO REASON TO BE ALONE (WOO YEAH)
   .song-title {
+    text-align: center;
     position: absolute;
     top: 10%;
-    left: 10%;
+    left: 5%;
   }
   .attributions {
     position: absolute;
-    top: 50%;
-    left: 10%;
+    bottom: 15%;
+    left: 5%;
   }
   .lyrics {
+    text-align: right;
     position: absolute;
-    top: 10%;
-    right: 10%;
+    bottom: 18%;
+    right: 5%;
   }
 }
 
-.page-5 {
+.page-5 { //ANNOUNCEMENT
   .song-title {
     position: absolute;
     top: 10%;
@@ -281,48 +282,49 @@ html, body {
   }
   .attributions {
     position: absolute;
-    top: 50%;
-    left: 10%;
+    bottom: 10%;
+    left: 40%;
   }
   .lyrics {
     position: absolute;
-    top: 10%;
-    right: 10%;
+    top: 20%;
+    right: 5%;
   }
 }
 
-.page-6 {
+.page-6 { //17 YEARS
   .song-title {
     position: absolute;
-    top: 10%;
+    top: 20%;
     left: 10%;
   }
   .attributions {
     position: absolute;
-    top: 50%;
-    left: 10%;
+    top: 20%;
+    right: 10%;
   }
   .lyrics {
     position: absolute;
-    top: 10%;
-    right: 10%;
+    bottom: 15%;
+    left: 10%;
   }
 }
 
-.page-7 {
+.page-7 { //IF WE LIVE, WE LIVE TO TREAD ON KINGS
   .song-title {
     position: absolute;
-    top: 10%;
-    left: 10%;
+    top: 35%;
+    left: 5%;
   }
   .attributions {
     position: absolute;
-    top: 50%;
-    left: 10%;
+    top: 60%;
+    left: 5%;
   }
   .lyrics {
+    text-align: right;
     position: absolute;
     top: 10%;
-    right: 10%;
+    right: 5%;
   }
 }
