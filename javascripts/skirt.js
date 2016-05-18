@@ -48,8 +48,33 @@ function nextTrack() {
 function skipNext() {
   var file = album.src.split("/");
   var nextTrackNumber = parseInt(file[file.length - 1]) + 1;
+  if ( nextTrackNumber > 7 ) {
+    nextTrackNumber = 1;
+  }
   var newSource = "audio/"+nextTrackNumber+".mp3";
   trackNumber.innerHTML = nextTrackNumber;
+  album.src = newSource;
+  if (isPlaying == true) {
+    album.play();
+    isPlaying = true;
+    toggleAudio.src = "images/pause_circle.svg";
+    return;
+  } else {
+    album.pause();
+    isPlaying = false;
+    toggleAudio.src = "images/play_circle.svg";
+    return;
+  }
+}
+
+function skipPrevious() {
+  var file = album.src.split("/");
+  var previousTrackNumber = parseInt(file[file.length - 1]) - 1;
+  if ( previousTrackNumber < 1 ) {
+    previousTrackNumber = 7;
+  }
+  var newSource = "audio/"+previousTrackNumber+".mp3";
+  trackNumber.innerHTML = previousTrackNumber;
   album.src = newSource;
   if (isPlaying == true) {
     album.play();
