@@ -1,0 +1,388 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 5, ../../../../.rvm/gems/ruby-2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../.rvm/gems/ruby-2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../.rvm/gems/ruby-2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../.rvm/gems/ruby-2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../.rvm/gems/ruby-2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../.rvm/gems/ruby-2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../.rvm/gems/ruby-2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../.rvm/gems/ruby-2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../.rvm/gems/ruby-2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/******
+* STYLES
+***/
+/* line 13, ../sass/screen.scss */
+html, body {
+  height: 100%;
+  font-family: sans-serif;
+}
+
+/* line 18, ../sass/screen.scss */
+.audio-controls {
+  position: fixed;
+  z-index: 10;
+  top: 0%;
+  left: 0%;
+  padding: .25em;
+}
+/* line 25, ../sass/screen.scss */
+.audio-controls .toggle-audio {
+  width: auto;
+  height: 2.5em;
+  position: relative;
+}
+/* line 31, ../sass/screen.scss */
+.audio-controls .track-number {
+  font-size: 2em;
+  position: relative;
+  top: -.25em;
+}
+
+/* line 38, ../sass/screen.scss */
+.nav {
+  position: fixed;
+  z-index: 10;
+  left: 0%;
+  bottom: 0%;
+  padding: 1em;
+  display: block;
+  width: 100%;
+}
+/* line 47, ../sass/screen.scss */
+.nav a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  outline: 3px solid red;
+  background-color: red;
+}
+/* line 56, ../sass/screen.scss */
+.nav a:hover {
+  background-color: rgba(255, 255, 255, 0);
+}
+/* line 60, ../sass/screen.scss */
+.nav .switch-cover, .nav .toggle-cover {
+  float: right;
+  margin-right: 2em;
+}
+
+/* line 71, ../sass/screen.scss */
+.inside-nav {
+  display: none;
+}
+
+/* line 75, ../sass/screen.scss */
+#container {
+  position: absolute;
+  z-index: 1;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+/* line 83, ../sass/screen.scss */
+.album-covers, .inside-pages {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: none;
+}
+
+/* line 93, ../sass/screen.scss */
+.front-cover {
+  position: absolute;
+  z-index: 1;
+}
+/* line 97, ../sass/screen.scss */
+.front-cover .svg-title {
+  margin-top: 32%;
+  margin-left: 37%;
+  width: 27%;
+  height: auto;
+}
+/* line 104, ../sass/screen.scss */
+.front-cover .title {
+  display: none;
+  font-size: 5em;
+  position: relative;
+  top: 5em;
+  left: 5em;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+/* line 115, ../sass/screen.scss */
+.back-cover {
+  position: absolute;
+  z-index: 1;
+  display: none;
+}
+
+/* line 121, ../sass/screen.scss */
+.inside-pages {
+  display: none;
+}
+
+/* line 124, ../sass/screen.scss */
+.page-1 {
+  display: block;
+}
+
+/* line 127, ../sass/screen.scss */
+.page-2, .page-3, .page-4, .page-5, .page-6, .page-7 {
+  display: none;
+}
+
+/* line 131, ../sass/screen.scss */
+.page.inside {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+/* line 137, ../sass/screen.scss */
+.inside-pages {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+/* line 143, ../sass/screen.scss */
+.content-container {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 157, ../sass/screen.scss */
+.song-title {
+  font-size: 3em;
+}
+
+/* line 163, ../sass/screen.scss */
+.song-information {
+  padding: 1em;
+}
+
+/* line 173, ../sass/screen.scss */
+.attributions {
+  padding: 1em;
+}
+/* line 179, ../sass/screen.scss */
+.attributions dt {
+  width: 8em;
+  float: left;
+  clear: left;
+  display: inline-block;
+}
+/* line 185, ../sass/screen.scss */
+.attributions dd {
+  display: inline-block;
+  float: left;
+  clear: right;
+}
+
+/* line 192, ../sass/screen.scss */
+.lyrics {
+  padding: 1em;
+}
+/* line 194, ../sass/screen.scss */
+.lyrics p {
+  margin-bottom: 1em;
+}
+/* line 197, ../sass/screen.scss */
+.lyrics p:last-of-type {
+  margin-bottom: 0em;
+}
+
+/* line 205, ../sass/screen.scss */
+.page-1 .song-title {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+}
+/* line 210, ../sass/screen.scss */
+.page-1 .attributions {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+}
+/* line 215, ../sass/screen.scss */
+.page-1 .lyrics {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+}
+
+/* line 223, ../sass/screen.scss */
+.page-2 .song-title {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+}
+/* line 228, ../sass/screen.scss */
+.page-2 .attributions {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+}
+/* line 233, ../sass/screen.scss */
+.page-2 .lyrics {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+}
+
+/* line 241, ../sass/screen.scss */
+.page-3 .song-title {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+}
+/* line 246, ../sass/screen.scss */
+.page-3 .attributions {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+}
+/* line 251, ../sass/screen.scss */
+.page-3 .lyrics {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+}
+
+/* line 259, ../sass/screen.scss */
+.page-4 .song-title {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+}
+/* line 264, ../sass/screen.scss */
+.page-4 .attributions {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+}
+/* line 269, ../sass/screen.scss */
+.page-4 .lyrics {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+}
+
+/* line 277, ../sass/screen.scss */
+.page-5 .song-title {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+}
+/* line 282, ../sass/screen.scss */
+.page-5 .attributions {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+}
+/* line 287, ../sass/screen.scss */
+.page-5 .lyrics {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+}
+
+/* line 295, ../sass/screen.scss */
+.page-6 .song-title {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+}
+/* line 300, ../sass/screen.scss */
+.page-6 .attributions {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+}
+/* line 305, ../sass/screen.scss */
+.page-6 .lyrics {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+}
+
+/* line 313, ../sass/screen.scss */
+.page-7 .song-title {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+}
+/* line 318, ../sass/screen.scss */
+.page-7 .attributions {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+}
+/* line 323, ../sass/screen.scss */
+.page-7 .lyrics {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+}

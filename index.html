@@ -1,0 +1,305 @@
+<!DOCTYPE html><html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--<link href='http://fonts.googleapis.com/css?family=Ultra' rel='stylesheet' type='text/css' />-->
+  <link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <script src="javascripts/skirt.js" type="text/javascript" ></script>
+  <!--[if IE]>
+      <link href="stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <![endif]-->
+</head>
+
+<body>
+
+  <header class="audio-controls">
+    <!--<audio controls>
+      <source src="audio/big-sky.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>-->
+    <audio id="album" src="audio/1.mp3"></audio>
+    <a href="#" onclick="togglePlay()"><img id="toggleAudio" class="toggle-play" src="images/play_circle.svg" /></a>
+    <span class="track-number">Track <span id="trackNumber">1</span>
+    </span>
+  </header>
+
+  <nav id="coverNav" class="nav cover-nav">
+    <a id="toggleInside" class="toggle-inside" href="#" onclick="toggleInside()">Inside</a>
+    <a id="switchCover" class="switch-cover" href="#" onclick="switchCover()">Back Cover</a>
+  </nav>
+
+  <main id="container" class="container">
+    <section id="albumCovers" class="album-covers">
+      <section id="frontCover" class="page front-cover">
+        <article class="content">
+          <span id="title" class="title">Skirt</span>
+        </article>
+      </section>
+      <section id="backCover" class="page back-cover">
+        <article class="content">
+          <ul>Members
+            <li>Brendan Sellers</li>
+            <li>Mike Kamison</li>
+            <li>Bret Buckman</li>
+          </ul>
+        </article>
+        <a href="http://skirt666.bandcamp.com">skirt666.bandcamp.com</a>
+      </section>
+    </section>
+
+    <section id="insidePages" class="inside-pages">
+      <section id="page1" class="page inside page-1">
+        <div class="content-container">
+          <article class="content">
+            <h2 class="song-title">Brutality Forever</h2>
+              <dl class="attributions">
+                <dt>Brendan Sellers</dt> <dd>Bass, vocals</dd>
+                <dt>Mike Kamison</dt> <dd>Guitar, vocals</dd>
+                <dt>Bret Buckman</dt> <dd>Drums</dd>
+              </dl>
+
+              <div class="lyrics">
+                <p>Exanguinate my liver<br />
+                Tear out my spine<br />
+                Blood dripping down the altar<br />
+                Of a sacred shrine</p>
+
+                <p>We'll always be together now<br />
+                Brutality FOREVER</p>
+
+                <p>Burn my flesh into ashes<br />
+                Suck on my bones<br />
+                Lean closer, taste the fire<br />
+                Fucking the unknown</p>
+
+                <p>We'll always be together now<br />
+                Brutality FOREVER</p>
+
+                <p>We'll always be together<br />
+                Transform my pain to pleasure<br />
+                We'll always be together now</p>
+              </div>
+          </article>
+        </div>
+      </section>
+      <section id="page2" class="page inside page-2">
+        <div class="content-container">
+          <article class="content">
+            <h2 class="song-title">Skirt</h2>
+            <div class="song-information">
+              <dl class="attributions">
+                <dt>Brendan Sellers</dt> <dd>Drums</dd>
+                <dt>Mike Kamison</dt> <dd>Bass, vocals</dd>
+                <dt>Bret Buckman</dt> <dd>Guitar, vocals</dd>
+              </dl>
+
+              <div class="lyrics">
+                <p>All you people<br>
+                are you listening?</p>
+
+                <p>I'm wearing a skirt</p>
+
+                <p>Hell is nothing<br>
+                why don't you fuck off</p>
+
+                <p>I'm wearing a skirt</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section id="page3" class="page inside page-3">
+        <div class="content-container">
+          <article class="content">
+            <h2 class="song-title">MBST</h2>
+            <div class="song-information">
+              <dl class="attributions">
+                <dt>Brendan Sellers</dt> <dd>Guitar, vocals</dd>
+                <dt>Mike Kamison</dt> <dd>Drums, vocals</dd>
+                <dt>Bret Buckman</dt> <dd>Bass, vocals</dd>
+              </dl>
+
+              <div class="lyrics">
+                <p>Mister</p>
+                <p>Blister</p>
+                <p>Sister</p>
+                <p>Twister</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section id="page4" class="page inside page-4">
+        <div class="content-container">
+          <article class="content">
+            <h2 class="song-title">There’s No Reason to Be Alone (Woo Yeah)</h2>
+            <div class="song-information">
+              <dl class="attributions">
+                <dt>Brendan Sellers</dt> <dd>Guitar, vocals</dd>
+                <dt>Mike Kamison</dt> <dd>Drums, vocals</dd>
+                <dt>Bret Buckman</dt> <dd>Bass, vocals</dd>
+              </dl>
+
+              <div class="lyrics">
+                <p>Yeah I dreamed of you<br>
+                you, you cotton babe<br>
+                yeah, you tell me honey<br>
+                how you like to dance</p>
+
+                <p>Woo</p>
+
+                <p>Call me lately on the telephone<br>
+                Call me lately on the telephone<br>
+                you Call me lately on the telephone<br>
+                Call me any time you want</p>
+
+                <p>Call me anytime<br>
+                tell me that you're mine<br>
+                you scream so loud<br>
+                I couldn't live without<br>
+                ooh and I want you bad<br>
+                gonna make you proud</p>
+
+                <p>Woo</p>
+
+                <p>Hear my cell phone ring<br>
+                it don't mean a thing<br>
+                you see my pockets shining<br>
+                I'm only dieing<br>
+                hear my guitar sing<br>
+                but it don't mean a thing<br>
+                there's no reason to be alone baby</p>
+
+                <p>Woo</p>
+
+                <p>Call me anytime</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section id="page5" class="page inside page-5">
+        <div class="content-container">
+          <article class="content">
+            <h2 class="song-title">Announcement</h2>
+            <div class="song-information">
+              <dl class="attributions">
+                <dt>Brendan Sellers</dt> <dd>Guitar, vocals</dd>
+                <dt>Mike Kamison</dt> <dd>Drums</dd>
+                <dt>Bret Buckman</dt> <dd>Bass</dd>
+              </dl>
+
+              <div class="lyrics">
+                <p>I'm feeling better<br />
+                But I won't be making an announcement</p>
+
+                <p>I started to announce (once upon a time)<br />
+                But the words weren't at all what I meant</p>
+
+                <p>Unloyal to the royalty<br />
+                I was borgouise, and captive in descent</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section id="page6" class="page inside page-6">
+        <div class="content-container">
+          <article class="content">
+            <h2 class="song-title">17 Years</h2>
+            <div class="song-information">
+              <dl class="attributions">
+                <dt>Brendan Sellers</dt> <dd>Guitar, vocals</dd>
+                <dt>Mike Kamison</dt> <dd>Drums, vocals</dd>
+                <dt>Bret Buckman</dt> <dd>Bass</dd>
+              </dl>
+
+              <div class="lyrics">
+                <p>Standing there<br />
+                I don't know who we are<br />
+                You can tell me what you like<br />
+                I'll be there</p>
+
+                <p>17 years beyond the grave<br />
+                Hasn't changed a thing<br />
+                You can tell me what you like<br />
+                I'll be there</p>
+
+                <p>Don't tell me what time you think it is<br />
+                I can't give you more than you want<br />
+                You know that I am only one<br />
+                Even though we are two</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section id="page7" class="page inside page-7">
+        <div class="content-container">
+          <article class="content">
+            <h2 class="song-title">If We Live, We Live to Tread on Kings</h2>
+            <div class="song-information">
+              <dl class="attributions">
+                <dt>Brendan Sellers</dt> <dd>Guitar, vocals</dd>
+                <dt>Mike Kamison</dt> <dd>Drums, vocals</dd>
+                <dt>Bret Buckman</dt> <dd>Bass, vocals</dd>
+              </dl>
+
+              <div class="lyrics">
+                <p>Come the demons<br />
+                the young men come<br />
+                back to satan<br />
+                the best men come</p>
+
+                <p>Get to heaven<br />
+                the best men don't<br />
+                back to hell<br />
+                where the world dies old</p>
+
+                <p>In the beginning<br />
+                still nothing at all<br />
+                everybody's a peasant<br />
+                in my world they fall</p>
+
+                <p>politicians, they want us all dead<br />
+                politicians, they get bullets in the head</p>
+
+                <p>come to God<br />
+                yeah the faithful say<br />
+                follow the book<br />
+                it's the only way<br />
+                they're all wrong<br />
+                they're all wrong these days<br />
+                they're all wrong</p>
+
+                <p>politicians who turn backs on<br />
+                people who are the weakest of all<br />
+                I can't tell you where to go now<br />
+                I can't tell you where to run</p>
+
+                <p>We are the children of misery<br />
+                born from the slaves that they burned in effigy</p>
+
+                <p>We are the free people of history<br />
+                come what burden may<br />
+                we are the black blooded children<br />
+                of the vision of god<br />
+                we are the masters of our kingdom<br />
+                and we're dying alone</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+    <section>
+  </main>
+      <nav id="insideNav" class="nav inside-nav">
+        <a id="insidePrevious" class="inside-previous" href="#" onclick="insidePrevious()">Previous</a>
+        <a id="insideNext" class="inside-next" href="#" onclick="insideNext()">Next</a>
+        <a id="toggleCover" class="toggle-cover" href="#" onclick="toggleCover()">Cover</a>
+      </nav>
+</body>
+</html>

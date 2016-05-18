@@ -1,0 +1,328 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "compass/css3.scss";
+
+/******
+* STYLES
+***/
+
+html, body {
+  height: 100%;
+  font-family: sans-serif;
+}
+
+.audio-controls {
+  position: fixed;
+  z-index: 10;
+  top: 0%;
+  left: 0%;
+  padding: .25em;
+
+  .toggle-audio {
+    width: auto;
+    height: 2.5em;
+    position: relative;
+  }
+
+  .track-number {
+    font-size: 2em;
+    position: relative;
+    top: -.25em;
+  }
+}
+
+.nav {
+  position: fixed;
+  z-index: 10;
+  left: 0%;
+  bottom: 0%;
+  padding: 1em;
+  display: block;
+  width: 100%;
+
+  a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    outline: 3px solid red;
+    background-color: red;
+  }
+
+  a:hover {
+    background-color: rgba(255,255,255,0);
+  }
+
+  .switch-cover, .toggle-cover {
+    float: right;
+    margin-right: 2em;
+  }
+}
+
+.cover-nav {
+
+  .toggle-inside {
+  }
+}
+.inside-nav {
+  display: none;
+}
+
+#container {
+  position: absolute;
+  z-index: 1;
+  min-width: 100%;
+  min-height: 100%;
+
+}
+
+.album-covers, .inside-pages {
+  width: 100%;
+  height: 100%;
+  background: {
+    size: cover;
+    position: center center;
+    repeat: none;
+  }
+}
+
+.front-cover {
+  position: absolute;
+  z-index: 1;
+
+  .svg-title {
+    margin-top: 32%;
+    margin-left: 37%;
+    width: 27%;
+    height: auto;
+  }
+
+  .title {
+    display: none;
+    font-size: 5em;
+    position: relative;
+    top: 5em;
+    left: 5em;
+    text-transform: uppercase;
+    font-weight: 900;
+  }
+}
+
+.back-cover {
+  position: absolute;
+  z-index: 1;
+  display: none;
+}
+
+.inside-pages {
+ display: none;
+}
+.page-1 {
+  display: block;
+}
+.page-2,.page-3, .page-4, .page-5, .page-6, .page-7 {
+  display: none;
+}
+
+.page.inside {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.inside-pages {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.content-container {
+  width: 100%;
+  height: 100%;
+//  @include flex-wrap(nowrap);
+//  @include display-flex(flex);
+//  @include justify-content(center);
+//  @include align-items(center);
+//  @include align-content(center);
+}
+
+
+.content{
+}
+
+.song-title {
+  font-size: 3em;
+//  background-color: rgba(0,0,0,.8);
+//  color: white;
+}
+
+.song-information {
+  padding: 1em;
+//  background-color: rgba(255,255,255,.8);
+//  @include flex-wrap(nowrap);
+//  @include display-flex(flex);
+//  @include flex-direction(row-reverse);
+//  @include justify-content(center);
+//  @include align-items(center);
+//  @include align-content(center);
+}
+.attributions {
+  padding: 1em;
+//  @include align-self(flex-end);
+  dl {
+
+  }
+  dt {
+    width: 8em;
+    float: left;
+    clear:left;
+    display: inline-block;
+  }
+  dd {
+    display: inline-block;
+    float: left;
+    clear:right;
+  }
+}
+
+.lyrics {
+  padding: 1em;
+  p {
+    margin-bottom: 1em;
+  }
+  p:last-of-type {
+    margin-bottom: 0em;
+  }
+}
+
+.page-1 {
+  //background-color: red;
+  //background-blend-mode: lighten;
+  .song-title {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+  }
+  .attributions {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+  }
+  .lyrics {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+  }
+}
+
+.page-2 {
+  .song-title {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+  }
+  .attributions {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+  }
+  .lyrics {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+  }
+}
+
+.page-3 {
+  .song-title {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+  }
+  .attributions {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+  }
+  .lyrics {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+  }
+}
+
+.page-4 {
+  .song-title {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+  }
+  .attributions {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+  }
+  .lyrics {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+  }
+}
+
+.page-5 {
+  .song-title {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+  }
+  .attributions {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+  }
+  .lyrics {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+  }
+}
+
+.page-6 {
+  .song-title {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+  }
+  .attributions {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+  }
+  .lyrics {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+  }
+}
+
+.page-7 {
+  .song-title {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+  }
+  .attributions {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+  }
+  .lyrics {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+  }
+}
