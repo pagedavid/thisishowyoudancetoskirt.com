@@ -103,7 +103,7 @@ function switchCover() {
   } else {
     backCover.style.display = 'none';
     frontCover.style.display = 'block';
-    albumCovers.style.backgroundImage = "url('images/front-cover.jpg')";
+    albumCovers.style.backgroundImage = "url('images/front-cover2.jpg')";
     switchCover.innerHTML = 'Back Cover';
   }
 }
