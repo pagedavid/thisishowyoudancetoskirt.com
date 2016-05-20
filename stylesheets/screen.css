@@ -73,31 +73,47 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* line 13, ../sass/screen.scss */
 html, body {
   height: 100%;
-  font-family: sans-serif;
+  font-family: "Didact Gothic", sans-serif;
+  text-transform: lowercase;
+  color: white;
+  line-height: 1.2;
+  font-weight: bold;
+  letter-spacing: .04em;
+  text-shadow: 1px 1px 0px black;
 }
 
-/* line 18, ../sass/screen.scss */
+/* line 24, ../sass/screen.scss */
 .audio-controls {
   position: fixed;
   z-index: 10;
   top: 0%;
   left: 0%;
-  padding: .25em;
+  padding: .5em .5em 0em .5em;
+  background-color: black;
 }
-/* line 25, ../sass/screen.scss */
-.audio-controls .toggle-audio {
+/* line 32, ../sass/screen.scss */
+.audio-controls .toggle-play {
   width: auto;
-  height: 2.5em;
-  position: relative;
+  height: 3em;
 }
-/* line 31, ../sass/screen.scss */
-.audio-controls .track-number {
-  font-size: 2em;
+/* line 36, ../sass/screen.scss */
+.audio-controls .next-track,
+.audio-controls .previous-track {
+  width: auto;
+  height: 2.25em;
   position: relative;
   top: -.25em;
+  padding-left: .5em;
+}
+/* line 45, ../sass/screen.scss */
+.audio-controls .track-title {
+  font-size: 2em;
+  padding-left: .25em;
+  position: relative;
+  top: -.35em;
 }
 
-/* line 38, ../sass/screen.scss */
+/* line 54, ../sass/screen.scss */
 .nav {
   position: fixed;
   z-index: 10;
@@ -107,7 +123,7 @@ html, body {
   display: block;
   width: 100%;
 }
-/* line 47, ../sass/screen.scss */
+/* line 63, ../sass/screen.scss */
 .nav a {
   text-decoration: none;
   color: white;
@@ -116,22 +132,22 @@ html, body {
   outline: 3px solid red;
   background-color: red;
 }
-/* line 56, ../sass/screen.scss */
+/* line 72, ../sass/screen.scss */
 .nav a:hover {
   background-color: rgba(255, 255, 255, 0);
 }
-/* line 60, ../sass/screen.scss */
+/* line 76, ../sass/screen.scss */
 .nav .switch-cover, .nav .toggle-cover {
   float: right;
   margin-right: 2em;
 }
 
-/* line 71, ../sass/screen.scss */
+/* line 87, ../sass/screen.scss */
 .inside-nav {
   display: none;
 }
 
-/* line 75, ../sass/screen.scss */
+/* line 91, ../sass/screen.scss */
 #container {
   position: absolute;
   z-index: 1;
@@ -139,7 +155,7 @@ html, body {
   min-height: 100%;
 }
 
-/* line 83, ../sass/screen.scss */
+/* line 99, ../sass/screen.scss */
 .album-covers, .inside-pages {
   width: 100%;
   height: 100%;
@@ -148,19 +164,19 @@ html, body {
   background-repeat: none;
 }
 
-/* line 93, ../sass/screen.scss */
+/* line 109, ../sass/screen.scss */
 .front-cover {
   position: absolute;
   z-index: 1;
 }
-/* line 97, ../sass/screen.scss */
+/* line 113, ../sass/screen.scss */
 .front-cover .svg-title {
   margin-top: 32%;
   margin-left: 37%;
   width: 27%;
   height: auto;
 }
-/* line 104, ../sass/screen.scss */
+/* line 120, ../sass/screen.scss */
 .front-cover .title {
   display: none;
   font-size: 5em;
@@ -171,117 +187,128 @@ html, body {
   font-weight: 900;
 }
 
-/* line 115, ../sass/screen.scss */
+/* line 131, ../sass/screen.scss */
 .back-cover {
   position: absolute;
   z-index: 1;
   display: none;
 }
 
-/* line 121, ../sass/screen.scss */
+/* line 137, ../sass/screen.scss */
 .inside-pages {
   display: none;
 }
 
-/* line 124, ../sass/screen.scss */
+/* line 140, ../sass/screen.scss */
 .page-1 {
   display: block;
 }
 
-/* line 127, ../sass/screen.scss */
+/* line 143, ../sass/screen.scss */
 .page-2, .page-3, .page-4, .page-5, .page-6, .page-7 {
   display: none;
 }
 
-/* line 131, ../sass/screen.scss */
+/* line 147, ../sass/screen.scss */
 .page.inside {
   width: 100%;
   height: 100%;
   position: absolute;
 }
 
-/* line 137, ../sass/screen.scss */
+/* line 153, ../sass/screen.scss */
 .inside-pages {
   width: 100%;
   height: 100%;
   position: absolute;
 }
 
-/* line 143, ../sass/screen.scss */
+/* line 159, ../sass/screen.scss */
 .content-container {
   width: 100%;
   height: 100%;
 }
 
-/* line 154, ../sass/screen.scss */
+/* line 165, ../sass/screen.scss */
 .content {
   color: white;
   font-size: 1.2em;
 }
 
-/* line 159, ../sass/screen.scss */
+/* line 170, ../sass/screen.scss */
 .song-title {
   font-size: 3em;
-  font-family: "Rockwell Std", serif;
+  font-family: "Anton", serif;
+  text-transform: uppercase;
+  font-weight: 400;
 }
 
-/* line 174, ../sass/screen.scss */
+/* line 182, ../sass/screen.scss */
+.attributions {
+  font-family: "Didact Gothic", sans-serif;
+  text-transform: lowercase !important;
+}
+/* line 189, ../sass/screen.scss */
 .attributions dt {
   width: 9em;
   float: left;
   clear: left;
   display: inline-block;
 }
-/* line 180, ../sass/screen.scss */
+/* line 195, ../sass/screen.scss */
 .attributions dd {
   display: inline-block;
   float: left;
   clear: right;
 }
 
-/* line 189, ../sass/screen.scss */
+/* line 203, ../sass/screen.scss */
 .lyrics p {
   margin-bottom: 1em;
 }
-/* line 192, ../sass/screen.scss */
+/* line 206, ../sass/screen.scss */
 .lyrics p:last-of-type {
   margin-bottom: 0em;
 }
 
-/* line 198, ../sass/screen.scss */
+/* line 212, ../sass/screen.scss */
 .page-1 .song-title {
   position: absolute;
   top: 10%;
   left: 10%;
 }
-/* line 203, ../sass/screen.scss */
+/* line 217, ../sass/screen.scss */
 .page-1 .attributions {
   position: absolute;
   top: 20%;
   right: 10%;
 }
-/* line 208, ../sass/screen.scss */
+/* line 222, ../sass/screen.scss */
 .page-1 .lyrics {
   position: absolute;
   top: 20%;
   left: 10%;
 }
 
-/* line 216, ../sass/screen.scss */
+/* line 229, ../sass/screen.scss */
+.page-2 {
+  text-shadow: none;
+}
+/* line 231, ../sass/screen.scss */
 .page-2 .song-title {
   color: black;
   position: absolute;
   top: 20%;
   right: 25%;
 }
-/* line 222, ../sass/screen.scss */
+/* line 237, ../sass/screen.scss */
 .page-2 .attributions {
   color: black;
   position: absolute;
   top: 35%;
   left: 30%;
 }
-/* line 228, ../sass/screen.scss */
+/* line 243, ../sass/screen.scss */
 .page-2 .lyrics {
   color: black;
   position: absolute;
@@ -289,21 +316,25 @@ html, body {
   right: 15%;
 }
 
-/* line 237, ../sass/screen.scss */
+/* line 251, ../sass/screen.scss */
+.page-3 {
+  text-shadow: none;
+}
+/* line 253, ../sass/screen.scss */
 .page-3 .song-title {
   color: black;
   position: absolute;
   top: 35%;
   left: 42%;
 }
-/* line 243, ../sass/screen.scss */
+/* line 259, ../sass/screen.scss */
 .page-3 .attributions {
   color: black;
   position: absolute;
   bottom: 35%;
   left: 5%;
 }
-/* line 249, ../sass/screen.scss */
+/* line 265, ../sass/screen.scss */
 .page-3 .lyrics {
   color: black;
   position: absolute;
@@ -311,20 +342,20 @@ html, body {
   right: 25%;
 }
 
-/* line 258, ../sass/screen.scss */
+/* line 274, ../sass/screen.scss */
 .page-4 .song-title {
   text-align: center;
   position: absolute;
   top: 10%;
   left: 5%;
 }
-/* line 264, ../sass/screen.scss */
+/* line 280, ../sass/screen.scss */
 .page-4 .attributions {
   position: absolute;
   bottom: 15%;
   left: 5%;
 }
-/* line 269, ../sass/screen.scss */
+/* line 285, ../sass/screen.scss */
 .page-4 .lyrics {
   text-align: right;
   position: absolute;
@@ -332,60 +363,60 @@ html, body {
   right: 5%;
 }
 
-/* line 278, ../sass/screen.scss */
+/* line 294, ../sass/screen.scss */
 .page-5 .song-title {
   position: absolute;
   top: 10%;
   left: 10%;
 }
-/* line 283, ../sass/screen.scss */
+/* line 299, ../sass/screen.scss */
 .page-5 .attributions {
   position: absolute;
   bottom: 10%;
   left: 40%;
 }
-/* line 288, ../sass/screen.scss */
+/* line 304, ../sass/screen.scss */
 .page-5 .lyrics {
   position: absolute;
   top: 20%;
   right: 5%;
 }
 
-/* line 296, ../sass/screen.scss */
+/* line 312, ../sass/screen.scss */
 .page-6 .song-title {
   position: absolute;
   top: 20%;
   left: 10%;
 }
-/* line 301, ../sass/screen.scss */
+/* line 317, ../sass/screen.scss */
 .page-6 .attributions {
   position: absolute;
   top: 20%;
   right: 10%;
 }
-/* line 306, ../sass/screen.scss */
+/* line 322, ../sass/screen.scss */
 .page-6 .lyrics {
   position: absolute;
   bottom: 15%;
   left: 10%;
 }
 
-/* line 314, ../sass/screen.scss */
+/* line 330, ../sass/screen.scss */
 .page-7 .song-title {
   position: absolute;
   top: 35%;
   left: 5%;
 }
-/* line 319, ../sass/screen.scss */
+/* line 335, ../sass/screen.scss */
 .page-7 .attributions {
   position: absolute;
   top: 60%;
   left: 5%;
 }
-/* line 324, ../sass/screen.scss */
+/* line 340, ../sass/screen.scss */
 .page-7 .lyrics {
   text-align: right;
   position: absolute;
-  top: 10%;
-  right: 5%;
+  top: 2.5%;
+  right: 10%;
 }

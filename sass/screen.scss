@@ -12,7 +12,13 @@
 
 html, body {
   height: 100%;
-  font-family: sans-serif;
+  font-family: "Didact Gothic", sans-serif;
+  text-transform: lowercase;
+  color: white;
+  line-height: 1.2;
+  font-weight: bold;
+  letter-spacing: .04em;
+  text-shadow: 1px 1px 0px black;
 }
 
 .audio-controls {
@@ -20,18 +26,28 @@ html, body {
   z-index: 10;
   top: 0%;
   left: 0%;
-  padding: .25em;
+  padding: .5em .5em 0em .5em;
+  background-color: black;
 
-  .toggle-audio {
+  .toggle-play {
     width: auto;
-    height: 2.5em;
-    position: relative;
+    height: 3em;
   }
-
-  .track-number {
-    font-size: 2em;
+  .next-track,
+  .previous-track {
+    width: auto;
+    height: 2.25em;
     position: relative;
     top: -.25em;
+    padding-left: .5em;
+  }
+
+  .track-title {
+    font-size: 2em;
+    padding-left: .25em;
+    position: relative;
+    //line-height: 1.25;
+    top: -.35em;
   }
 }
 
@@ -143,11 +159,6 @@ html, body {
 .content-container {
   width: 100%;
   height: 100%;
-//  @include flex-wrap(nowrap);
-//  @include display-flex(flex);
-//  @include justify-content(center);
-//  @include align-items(center);
-//  @include align-content(center);
 }
 
 
@@ -158,15 +169,19 @@ html, body {
 
 .song-title {
   font-size: 3em;
-  font-family: "Rockwell Std", serif;
-
+  font-family: "Anton", serif;
+  text-transform: uppercase;
+  font-weight: 400;
 }
 
 .song-information {
- // padding: 1em;
+  //font-family: "Didact Gothic", sans-serif;
+  //text-transform: lowercase !important;
 
 }
 .attributions {
+  font-family: "Didact Gothic", sans-serif;
+  text-transform: lowercase !important;
   //padding: 1em;
   dl {
 
@@ -185,7 +200,6 @@ html, body {
 }
 
 .lyrics {
-  //padding: 1em;
   p {
     margin-bottom: 1em;
   }
@@ -213,6 +227,7 @@ html, body {
 }
 
 .page-2 { //SKIRT
+  text-shadow: none;
   .song-title {
     color: black;
     position: absolute;
@@ -234,6 +249,7 @@ html, body {
 }
 
 .page-3 { //MBST
+  text-shadow: none;
   .song-title {
     color: black;
     position: absolute;
@@ -324,7 +340,7 @@ html, body {
   .lyrics {
     text-align: right;
     position: absolute;
-    top: 10%;
-    right: 5%;
+    top: 2.5%;
+    right: 10%;
   }
 }
