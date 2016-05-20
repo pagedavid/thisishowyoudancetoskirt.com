@@ -6,6 +6,12 @@
 @import "compass/reset";
 @import "compass/css3.scss";
 
+@mixin media-query($width) {
+  @media screen and (min-width: $width) {
+    @content;
+  }
+}
+
 /******
 * STYLES
 ***/
@@ -23,6 +29,7 @@ html, body {
 }
 
 .audio-controls {
+  width: 100%;
   position: fixed;
   z-index: 10;
   top: 0%;
@@ -32,19 +39,19 @@ html, body {
 
   .toggle-play {
     width: auto;
-    height: 3em;
+    height: 2em;
   }
   .next-track,
   .previous-track {
     width: auto;
-    height: 2.25em;
+    height: 1.5em;
     position: relative;
     top: -.25em;
     padding-left: .5em;
   }
 
   .track-title {
-    font-size: 2em;
+    font-size: 1.5em;
     padding-left: .25em;
     position: relative;
     //line-height: 1.25;
@@ -160,12 +167,17 @@ html, body {
 .content-container {
   width: 100%;
   height: 100%;
+  overflow-x: auto;
+  margin: 4em -2em 1em 0em;
+  //padding-left: 1em;
 }
 
 
 .content{
   color: white;
   font-size: 1.2em;
+  padding-left: 1em;
+  
 }
 
 .song-title {
@@ -184,8 +196,11 @@ html, body {
   font-family: "Didact Gothic", sans-serif;
   text-transform: lowercase !important;
   //padding: 1em;
-  dl {
 
+
+  dl {
+  display: block;
+    margin-bottom: 2em;
   }
   dt {
     width: 9em;
@@ -201,6 +216,9 @@ html, body {
 }
 
 .lyrics {
+  display: block;
+  padding: 2em 0em 10em 0em;
+  clear: left;
   p {
     margin-bottom: 1em;
   }
@@ -209,139 +227,178 @@ html, body {
   }
 }
 
-.page-1 { //BRUTALITY FOREVER
-  .song-title {
-    position: absolute;
-    top: 10%;
-    left: 10%;
-  }
-  .attributions {
-    position: absolute;
-    top: 20%;
-    right: 10%;
-  }
-  .lyrics {
-    position: absolute;
-    top: 20%;
-    left: 10%;
-  }
-}
+@include media-query(800px) {
 
-.page-2 { //SKIRT
-  text-shadow: none;
-  .song-title {
-    color: black;
-    position: absolute;
-    top: 20%;
-    right: 25%;
-  }
-  .attributions {
-    color:black;
-    position: absolute;
-    top: 35%;
-    left: 30%;
-  }
-  .lyrics {
-    color: black;
-    position: absolute;
-    bottom: 25%;
-    right: 15%;
-  }
-}
 
-.page-3 { //MBST
-  text-shadow: none;
-  .song-title {
-    color: black;
-    position: absolute;
-    top: 35%;
-    left: 42%;
-  }
-  .attributions {
-    color: black;
-    position: absolute;
-    bottom: 35%;
-    left: 5%;
-  }
-  .lyrics {
-    color: black;
-    position: absolute;
-    top: 30%;
-    right: 25%;
-  }
-}
 
-.page-4 { //THERE'S NO REASON TO BE ALONE (WOO YEAH)
-  .song-title {
-    text-align: center;
-    position: absolute;
-    top: 10%;
-    left: 5%;
+  .toggle-play {
+    width: auto;
+    height: 3em;
   }
+  .next-track,
+  .previous-track {
+    width: auto;
+    height: 2.25em;
+    position: relative;
+    top: -.25em;
+    padding-left: .5em;
+  }
+  .track-title {
+    font-size: 2em;
+    padding-left: .25em;
+    position: relative;
+    //line-height: 1.25;
+    top: -.35em;
+  }
+  
+  .content-container {
+    margin: 0em;
+  }
+  
   .attributions {
-    position: absolute;
-    bottom: 15%;
-    left: 5%;
+    margin-bottom: 0em;
   }
+  
   .lyrics {
-    text-align: right;
-    position: absolute;
-    bottom: 18%;
-    right: 5%;
+    display: inline-block;
+    padding: 0em;
+    clear: initial;
   }
-}
 
-.page-5 { //ANNOUNCEMENT
-  .song-title {
-    position: absolute;
-    top: 10%;
-    left: 10%;
+  .page-1 { //BRUTALITY FOREVER
+    .song-title {
+      position: absolute;
+      top: 10%;
+      left: 10%;
+    }
+    .attributions {
+      position: absolute;
+      top: 20%;
+      right: 10%;
+    }
+    .lyrics {
+      position: absolute;
+      top: 20%;
+      left: 10%;
+    }
   }
-  .attributions {
-    position: absolute;
-    bottom: 10%;
-    left: 40%;
-  }
-  .lyrics {
-    position: absolute;
-    top: 20%;
-    right: 5%;
-  }
-}
 
-.page-6 { //17 YEARS
-  .song-title {
-    position: absolute;
-    top: 20%;
-    left: 10%;
+  .page-2 { //SKIRT
+    text-shadow: none;
+    .song-title {
+      color: black;
+      position: absolute;
+      top: 20%;
+      right: 25%;
+    }
+    .attributions {
+      color:black;
+      position: absolute;
+      top: 35%;
+      left: 30%;
+    }
+    .lyrics {
+      color: black;
+      position: absolute;
+      bottom: 25%;
+      right: 15%;
+    }
   }
-  .attributions {
-    position: absolute;
-    top: 20%;
-    right: 10%;
-  }
-  .lyrics {
-    position: absolute;
-    bottom: 15%;
-    left: 10%;
-  }
-}
 
-.page-7 { //IF WE LIVE, WE LIVE TO TREAD ON KINGS
-  .song-title {
-    position: absolute;
-    top: 35%;
-    left: 5%;
+  .page-3 { //MBST
+    text-shadow: none;
+    .song-title {
+      color: black;
+      position: absolute;
+      top: 35%;
+      left: 42%;
+    }
+    .attributions {
+      color: black;
+      position: absolute;
+      bottom: 35%;
+      left: 5%;
+    }
+    .lyrics {
+      color: black;
+      position: absolute;
+      top: 30%;
+      right: 25%;
+    }
   }
-  .attributions {
-    position: absolute;
-    top: 60%;
-    left: 5%;
+
+  .page-4 { //THERE'S NO REASON TO BE ALONE (WOO YEAH)
+    .song-title {
+      text-align: center;
+      position: absolute;
+      top: 10%;
+      left: 5%;
+    }
+    .attributions {
+      position: absolute;
+      bottom: 15%;
+      left: 5%;
+    }
+    .lyrics {
+      text-align: right;
+      position: absolute;
+      top: 3em;
+      right: 5%;
+    }
   }
-  .lyrics {
-    text-align: right;
-    position: absolute;
-    top: 2.5%;
-    right: 10%;
+
+  .page-5 { //ANNOUNCEMENT
+    .song-title {
+      position: absolute;
+      top: 10%;
+      left: 10%;
+    }
+    .attributions {
+      position: absolute;
+      bottom: 10%;
+      left: 40%;
+    }
+    .lyrics {
+      position: absolute;
+      top: 20%;
+      right: 5%;
+    }
+  }
+
+  .page-6 { //17 YEARS
+    .song-title {
+      position: absolute;
+      top: 20%;
+      left: 10%;
+    }
+    .attributions {
+      position: absolute;
+      top: 20%;
+      right: 10%;
+    }
+    .lyrics {
+      position: absolute;
+      bottom: 15%;
+      left: 10%;
+    }
+  }
+
+  .page-7 { //IF WE LIVE, WE LIVE TO TREAD ON KINGS
+    .song-title {
+      position: absolute;
+      top: 35%;
+      left: 5%;
+    }
+    .attributions {
+      position: absolute;
+      top: 60%;
+      left: 5%;
+    }
+    .lyrics {
+      text-align: right;
+      position: absolute;
+      top: 3em;
+      right: 10%;
+    }
   }
 }
