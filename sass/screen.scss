@@ -57,6 +57,11 @@ html, body {
     //line-height: 1.25;
     top: -.35em;
   }
+  
+  p {
+    margin: 0em;
+    a {     color: white;}
+  }
 }
 
 .nav {
@@ -140,6 +145,14 @@ html, body {
   position: absolute;
   z-index: 1;
   display: none;
+  width: 100%;
+  
+  margin-top: 5em;
+  
+  h2 {
+    font-size: 4em;
+    text-align: center;
+  }
 }
 
 .inside-pages {
@@ -253,6 +266,7 @@ html, body {
   
   .content-container {
     margin: 0em;
+    overflow-x: inherit;
   }
   
   .attributions {

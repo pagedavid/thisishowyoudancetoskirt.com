@@ -25,12 +25,19 @@
     <span class="track-title"><span id="trackTitle">Brutality Forever</span></span>
     <a href="#" onclick="skipPrevious()"><img id="previousTrack" class="previous-track" src="images/skip_previous_circle.svg" /></a>
     <a href="#" onclick="skipNext()"><img id="nextTrack" class="next-track" src="images/skip_next_circle.svg" /></a>
+    <p class="download"><a href="http://skirt666.bandcamp.com">download album at skirt666.bandcamp.com</a></p>
     
   </header>
 
   <nav id="coverNav" class="nav cover-nav">
     <a id="toggleInside" class="toggle-inside" href="#" onclick="toggleInside()">Inside</a>
     <a id="switchCover" class="switch-cover" href="#" onclick="switchCover()">Back Cover</a>
+  </nav>
+  
+  <nav id="insideNav" class="nav inside-nav">
+    <a id="insidePrevious" class="inside-previous" href="#" onclick="insidePrevious()">Previous</a>
+    <a id="insideNext" class="inside-next" href="#" onclick="insideNext()">Next</a>
+    <a id="toggleCover" class="switch-cover" href="#" onclick="toggleCover()">Cover</a>
   </nav>
 
   <main id="container" class="container">
@@ -42,13 +49,10 @@
       </section>
       <section id="backCover" class="page back-cover">
         <article class="content">
-          <ul>Members
-            <li>Brendan Sellers</li>
-            <li>Mike Kamison</li>
-            <li>Bret Buckman</li>
-          </ul>
+          <h2>Mike Kamison</h2>
+          <h2>Bret Buckman</h2>
+          <h2>Brendan Sellers</h2>
         </article>
-        <a href="http://skirt666.bandcamp.com">skirt666.bandcamp.com</a>
       </section>
     </section>
 
@@ -300,10 +304,6 @@
 
     <section>
   </main>
-      <nav id="insideNav" class="nav inside-nav">
-        <a id="insidePrevious" class="inside-previous" href="#" onclick="insidePrevious()">Previous</a>
-        <a id="insideNext" class="inside-next" href="#" onclick="insideNext()">Next</a>
-        <a id="toggleCover" class="toggle-cover" href="#" onclick="toggleCover()">Cover</a>
-      </nav>
+
 </body>
 </html>
